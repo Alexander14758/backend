@@ -8,6 +8,7 @@ from datetime import datetime
 
 # Load environment variables
 load_dotenv()
+
 app = Flask(__name__)
 CORS(app)
 
@@ -177,7 +178,7 @@ if __name__ == '__main__':
             print(f"  - {var}")
         print("Please set these in your .env file or environment")
     
-    # Get port from environment or default to 8000 (since frontend runs on 5000)
+    # Get port from environment or default to 8000
     port = int(os.getenv('PORT', 8000))
     
     print(f"Starting backend server on port {port}")
